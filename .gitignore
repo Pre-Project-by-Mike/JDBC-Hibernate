@@ -1,0 +1,25 @@
+*.class
+*.jrtc
+*.info
+*.iml
+*.png
+*.json
+*.ts
+*.js
+*.db
+#*.properties
+*.log
+*.settings
+*.classpath
+*.project
+*.db
+/.idea/
+/out/
+/target/
+/bin/
+/node_modules/
+/src/test
+# Package Files #
+*.jar
+*.war
+*.ear
