@@ -25,7 +25,6 @@ public class UserDaoJDBCImpl implements UserDao {
     private static String deleteUser = "DELETE FROM users WHERE (id = ";
     private static String cleanTable = "TRUNCATE users";
 
-
     private Connection connection;
     private Statement statement;
     private ResultSet resultSet;
