@@ -20,8 +20,8 @@ public class Main {
         UserService userService = new UserServiceImpl();
         userService.createUsersTable();
         for (int i = 0; i < 4; i++) {
-            String name = "Iva" + (char)i;
-            userService.saveUser(name, "Budeik" + (char)i, (byte) (38  + i));
+            String name = String.valueOf(new StringBuilder("Iva").append((char)(i + 97)));
+            userService.saveUser(name, String.valueOf(new StringBuilder("Budeik").append((char)(i + 97))), (byte) (38  + i));
             System.out.println("User с именем – " + name + " добавлен в базу данных");
         }
         userService.getAllUsers().stream().forEach(System.out::println);
