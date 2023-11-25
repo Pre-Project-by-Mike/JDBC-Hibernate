@@ -120,11 +120,10 @@ public class UserDaoHibernateImpl implements UserDao {
 
     @Override
     public void cleanUsersTable() {
-        String cleanTable = "TRUNCATE profiles";
         try {
             session = createSessionFactory(getPostgresSqlHibernateConfiguration()).openSession();
             session.beginTransaction();
-            session.createSQLQuery(cleanTable).executeUpdate();
+            session.createSQLQuery("TRUNCATE profiles").executeUpdate();
             session.getTransaction().commit();
         } catch (Exception e) {
             if (session.getTransaction() != null) {
